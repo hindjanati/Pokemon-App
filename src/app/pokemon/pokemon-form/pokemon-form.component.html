@@ -11,8 +11,8 @@
                     pattern="^[a-zA-Z0-9àéèç]{1,25}$"
                    [(ngModel)]="pokemon.name" name="name"
                    #name="ngModel">
-    
-            <div [hidden]="name.valid || name.pristine"
+            <!-- pastine indique que la form n est pas changer -->
+           <div [hidden]="name.valid || name.pristine" 
                   class="card-panel red accent-1">
                   Le nom du pokémon est requis (1-25).
             </div>
@@ -75,7 +75,6 @@
               [disabled]="!pokemonForm.form.valid">
               Valider</button>
           </div>
-    
         </div>
       </div>
     </div>
