@@ -2,6 +2,11 @@
     border-left : 5px solid #42A946;
 }
 
+/* .ng-invalid[required]{
+    border-left: 5px solid #A94442;
+} */
+
 .ng-invalid:not(form){
     border-left: 5px solid #A94442;
 }
+

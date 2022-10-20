@@ -11,7 +11,7 @@
                     pattern="^[a-zA-Z0-9àéèç]{1,25}$"
                    [(ngModel)]="pokemon.name" name="name"
                    #name="ngModel">
-            <!-- pastine indique que le champs n est pas cahrger -->
+            <!-- pastine indique que le champs n est pas charger -->
            <div [hidden]="name.valid || name.pristine" 
                   class="card-panel red accent-1">
                   Le nom du pokémon est requis (1-25).
