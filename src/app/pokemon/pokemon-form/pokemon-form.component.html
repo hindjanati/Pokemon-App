@@ -1,4 +1,4 @@
-<form *ngIf="pokemon" (ngSubmit)="onSubmit()" #pokemonForm="ngForm">
+<form *ngIf="pokemon" (ngSubmit)="onSubmit()" #pokform="ngForm">
     <div class="row">
       <div class="col s8 offset-s2">
         <div class="card-panel">
@@ -11,7 +11,7 @@
                     pattern="^[a-zA-Z0-9àéèç]{1,25}$"
                    [(ngModel)]="pokemon.name" name="name"
                    #name="ngModel">
-            <!-- pastine indique que la form n est pas changer -->
+            <!-- pastine indique que le champs n est pas cahrger -->
            <div [hidden]="name.valid || name.pristine" 
                   class="card-panel red accent-1">
                   Le nom du pokémon est requis (1-25).
@@ -49,34 +49,32 @@
           <!-- Pokemon types -->
           <form class="form-group">
             <label for="types">Types</label>
-            <p *ngFor="let type of Types">
+            <p *ngFor="let t of Types">
               <label>
                 <input type="checkbox"
                   class="filled-in"
-                  id="{{ type }}"
-                  [value]="type"
-                  [checked]="hasType(type)"
-                  [disabled]="!isTypesValid(type)"
-                  (change)="selectType($event, type)"/>
-                <span [attr.for]="type">
-                  <div class="{{ type | pokemonTypeColor }}">
-                    {{ type }}
+                  [attr.value]="t"
+                  [checked]="hasType(t)"
+                  [disabled]="!isTypesValid(t)"
+                  (change)="selectType($event, t)"/>
+                <span [attr.for]="t">
+                  <div class="{{ t | pokemonTypeColor }}">
+                    {{ t }}  
                   </div>
                 </span>
               </label>
             </p>
           </form>
-    
           <!-- Submit button -->
           <div class="divider"></div>
           <div class="section center">
             <button type="submit"
               class="waves-effect waves-light btn"
-              [disabled]="!pokemonForm.form.valid">
+              [disabled]="!pokform.form.valid">
               Valider</button>
           </div>
         </div>
       </div>
     </div>
   </form>
-  <h3 *ngIf="!pokemon" class="center">Aucun pokémon à éditer..</h3>
+<h3 *ngIf="!pokemon" class="center">Aucun pokémon à éditer..</h3>

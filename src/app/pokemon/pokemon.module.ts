@@ -11,9 +11,9 @@ import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
 import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';
 
 const routes: Routes = [
-  {path: 'edit/pokemon/:id', component: EditPokemonComponent},
   {path: 'pokemons', component: ListPokemonComponent},
   {path: 'pokemon/:id', component: DetailPokemonComponent},
+  {path: 'edit/pokemon/:id', component: EditPokemonComponent}
 ];
 
 @NgModule({
