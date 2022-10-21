@@ -500,3 +500,22 @@ li.active{background-color:#ee6e73}.sidenav .collapsible-body>ul:not(.collapsibl
  .timepicker-canvas-out{opacity:0.25}.timepicker-canvas-bearing{stroke:none;fill:#26a69a}
  .timepicker-canvas-bg{stroke:none;fill:#26a69a}
  .timepicker-footer{margin:0 auto;padding:5px 1rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.timepicker-clear{color:#F44336}.timepicker-close{color:#26a69a}.timepicker-clear,.timepicker-close{padding:0 20px}@media only screen and (min-width: 601px){.timepicker-modal{max-width:600px}.timepicker-container.modal-content{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}.timepicker-text-container{top:32%}.timepicker-display-am-pm{position:relative;right:auto;bottom:auto;text-align:center;margin-top:1.2rem}}
+ .teal {
+    background-color: #606887!important;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating){
+    cursor: pointer;
+    color: #606887;
+    font-weight: 500 !important;
+    font-size: larger;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover{
+    color: #aab2d1;
+
+}
+
+body {
+    background-color: #f3f2f9;
+}
