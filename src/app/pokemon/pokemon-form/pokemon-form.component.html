@@ -16,7 +16,7 @@
                   class="card-panel red accent-1">
                   Le nom du pokémon est requis (1-25).
             </div>
-          </div>
+          </div> 
     
           <!-- Pokemon hp -->
           <div class="form-group">
@@ -53,7 +53,7 @@
               <label>
                 <input type="checkbox"
                   class="filled-in"
-                  [attr.value]="t"
+                  [value]="t"
                   [checked]="hasType(t)"
                   [disabled]="!isTypesValid(t)"
                   (change)="selectType($event, t)"/>
