@@ -12,7 +12,7 @@ import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';
 
 const routes: Routes = [
   {path: 'pokemons', component: ListPokemonComponent},
-  {path: 'pokemons/:id', component: DetailPokemonComponent},
+  {path: 'pokemon/:id', component: DetailPokemonComponent},
   {path: 'edit/pokemon/:id', component: EditPokemonComponent}
 ];
 

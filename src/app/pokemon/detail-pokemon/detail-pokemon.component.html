@@ -1,9 +1,9 @@
-<div *ngIf="pokemon" class="row">
+<div *ngIf="poke" class="row">
     <div class="col s12 m8 offset-m2">
-    <h2 class="header center">{{ pokemon.name }}</h2>
+    <h2 class="header center">{{ poke.name }}</h2>
     <div class="card horizontal hoverable">
       <div class="card-image">
-        <img [src]="pokemon.picture">
+        <img [src]="poke.picture">
       </div>
       <div class="card-stacked">
         <div class="card-content">
@@ -11,35 +11,35 @@
             <tbody>
               <tr>
                 <td>Nom</td>
-                <td><strong>{{ pokemon.name }}</strong></td>
+                <td><strong>{{ poke.name }}</strong></td>
               </tr>
               <tr>
                 <td>Points de vie</td>
-                <td><strong>{{ pokemon.hp }}</strong></td>
+                <td><strong>{{ poke.hp }}</strong></td>
               </tr>
               <tr>
                 <td>Dégâts</td>
-                <td><strong>{{ pokemon.cp }}</strong></td>
+                <td><strong>{{ poke.cp }}</strong></td>
               </tr>
               <tr>
                 <td>Types</td>
                 <td>
-                  <span *ngFor="let type of pokemon.types" class="{{ type | pokemonTypeColor }}">{{ type }}</span>
+                  <span *ngFor="let type of poke.types" class="{{ type | pokemonTypeColor }}">{{ type }}</span>
                 </td>
               </tr>
               <tr>
                 <td>Date de création</td>
-                <td><em>{{ pokemon.created | date:"dd/MM/yyyy" }}</em></td>
+                <td><em>{{ poke.created | date:"dd/MM/yyyy" }}</em></td>
               </tr>
             </tbody>
           </table>
         </div>
         <div class="card-action">
           <a (click)="goBack()">Retour</a>
-          <a [routerLink]="['/edit/pokemon',pokemon.id]">Editer</a>
+          <a [routerLink]="['/edit/pokemon',poke.id]">Editer</a>
         </div>
       </div>
     </div>
     </div>
     </div>
-<h4 *ngIf='!pokemon' class="center">Aucun pokémon à afficher !</h4>
+<h4 *ngIf='!poke' class="center">Aucun pokémon à afficher !</h4>
