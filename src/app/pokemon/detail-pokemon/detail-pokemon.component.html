@@ -37,6 +37,7 @@
         <div class="card-action">
           <a (click)="goBack()">Retour</a>
           <a [routerLink]="['/edit/pokemon',poke.id]">Editer</a>
+          <a (click)="deletePokemon(poke)">Supprimer</a>
         </div>
       </div>
     </div>
