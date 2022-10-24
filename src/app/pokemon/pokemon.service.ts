@@ -37,6 +37,18 @@ export class PokemonService {
     );
   }
 
+  addPokemon(pokemon: Pokemon): Observable<Pokemon> {
+    const httpOptions = {
+      headers: new HttpHeaders().set('Content-Type', 'application/json')
+    }; 
+    return this.http.post<Pokemon>('api/pokemons', pokemon, httpOptions).pipe(
+      tap((response) => this.log(response)),
+      catchError((error) => this.handleError(error, null))
+    );
+
+  }
+
+
   // getPokemonById(p: number): Pokemon|undefined {
   //   return POKEMONS.find(Pokemon => Pokemon.id == p);
   // } 
