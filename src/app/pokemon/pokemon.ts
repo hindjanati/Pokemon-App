@@ -9,8 +9,8 @@ export class Pokemon {
 
   constructor(
     name = 'Entrer un nom...',
-    hp = 100,
-    cp= 10,
+    hp = 0,
+    cp= 0,
     picture = 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png',
     types  = ['Normal'],
     created = new Date()
