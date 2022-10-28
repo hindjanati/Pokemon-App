@@ -519,3 +519,47 @@ li.active{background-color:#ee6e73}.sidenav .collapsible-body>ul:not(.collapsibl
 body {
     background-color: #f3f2f9;
 }
+
+.input-field input:active{
+    border-bottom: 1px solid #606887 !important;
+    box-shadow: 0 1px 0 0 #606887 !important;
+}
+.input-field input:focus{
+    border-bottom: 1px solid #606887 !important;
+    box-shadow: 0 1px 0 0 #606887 !important;
+}
+
+.collection a.collection-item {
+    color: #606887 !important;
+}
+label {
+    font-size: 13px !important;
+    margin-left: 12px;
+}
+
+.input-field input:active{
+    border-bottom: 1px solid #606887 !important;
+    box-shadow: 0 1px 0 0 #606887 !important;
+}
+
+.input-field input:focus{
+    border-bottom: 1px solid #606887 !important;
+    box-shadow: 0 1px 0 0 #606887 !important;
+}
+
+.login input:focus{
+    border-bottom: 1px solid #606887 !important;
+    box-shadow: 0 1px 0 0 #606887 !important;
+}
+
+.card-action .waves-effect {
+    background-color: #606887;
+}
+.card-action .waves-effect:hover{
+    background-color: #606887;
+}
+
+.hoverable {
+    padding: 24px;
+    border-radius: 0 0 2px 2px;
+}

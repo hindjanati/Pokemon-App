@@ -1,0 +1,27 @@
+<div class='row'>
+    <div class="col s12 m6 offset-m3">
+    <div class="card hoverable">
+      <div class="card-content center">
+        <span class="card-title">Page de connexion</span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/269px-International_Pok%C3%A9mon_logo.svg.png?20150121202211" alt="">
+        <p><em>{{message}}</em></p>
+      </div>
+            <form #loginForm="ngForm" class="login">
+          <div>
+            <label for="name">Name</label>
+            <div class="input-field">
+              <input type="text" id="name" [(ngModel)]="user" name="name" required>
+            </div>
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" [(ngModel)]="password" name="password" required>
+          </div>
+        </form>
+      <div class="card-action center">
+        <a (click)="login()" class="waves-effect waves-light btn"  *ngIf="!auth.isLoggedIn">Se connecter</a>
+        <a (click)="logout()" *ngIf="auth.isLoggedIn">Se déconnecter</a>
+      </div>
+</div>
+</div>
+</div>
